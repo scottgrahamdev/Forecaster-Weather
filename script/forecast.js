@@ -24,7 +24,7 @@ const getWeather = async (id) => {
     const baseUrl = "http://dataservice.accuweather.com/currentconditions/v1/";
     const queryParameters = `${id}?apikey=${apiKey}`;
 
-    const apiRepsonse = await fetch(baseUrl + queryParameters);
+    const apiResponse = await fetch(baseUrl + queryParameters);
     const data = await apiResponse.json();
 
     return data[0];
